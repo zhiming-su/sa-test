@@ -25,6 +25,7 @@ public class UserController {
         // 此处仅作模拟示例，真实项目需要从数据库中查询数据进行比对
         if("zhang".equals(username) && "123456".equals(password)) {
             StpUtil.login(10001);
+
             StpUtil.getSession().set("a","a");
 
             return SaResult.ok("成功").set("token",StpUtil.getTokenInfo().getTokenValue());
